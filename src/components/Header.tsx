@@ -9,6 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const menuItems = [
+    { name: 'Home', href: '/' },
     { name: 'Novidades', href: '/novidades' },
     { name: 'Feminino', href: '/feminino' },
     { name: 'Acessórios', href: '/acessorios' },
