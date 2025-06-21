@@ -10,6 +10,8 @@ import Feminino from "./pages/Feminino";
 import Acessorios from "./pages/Acessorios";
 import Contato from "./pages/Contato";
 import Filtro from "./pages/Filtro";
+import PoliticasPrivacidade from "./pages/PoliticasPrivacidade";
+import TermosUso from "./pages/TermosUso";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
