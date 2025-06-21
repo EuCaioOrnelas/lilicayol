@@ -1,17 +1,27 @@
 
 import React, { useState } from 'react';
 import { Search, Menu, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const menuItems = [
-    { name: 'Novidades', href: '#novidades' },
-    { name: 'Feminino', href: '#feminino' },
-    { name: 'Masculino', href: '#masculino' },
-    { name: 'Acessórios', href: '#acessorios' },
-    { name: 'Contato', href: '#contato' }
+    { name: 'Novidades', href: '/novidades' },
+    { name: 'Feminino', href: '/feminino' },
+    { name: 'Acessórios', href: '/acessorios' },
+    { name: 'Contato', href: '/contato' }
   ];
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/filtro?search=${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm('');
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -22,22 +32,26 @@ const Header = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-3xl md:text-4xl font-playfair font-bold text-lilicayol-black tracking-wide">
-              Lilicayol
-              <span className="block w-12 h-0.5 bg-gradient-to-r from-lilicayol-purple to-lilicayol-gold mx-auto mt-1"></span>
-            </h1>
+            <Link to="/">
+              <h1 className="text-3xl md:text-4xl font-playfair font-bold text-lilicayol-black tracking-wide hover:text-lilicayol-purple transition-colors duration-300">
+                Lilicayol
+                <span className="block w-12 h-0.5 bg-gradient-to-r from-lilicayol-purple to-lilicayol-gold mx-auto mt-1"></span>
+              </h1>
+            </Link>
           </div>
           
           {/* Search */}
           <div className="flex-1 flex justify-end">
-            <div className="relative">
+            <form onSubmit={handleSearch} className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-lilicayol-gray" />
               <input
                 type="text"
                 placeholder="Buscar..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 pr-4 py-2 border border-gray-200 rounded-full bg-gray-50 focus:outline-none focus:ring-2 focus:ring-lilicayol-purple focus:border-transparent transition-all duration-300 w-32 md:w-48"
               />
-            </div>
+            </form>
           </div>
         </div>
 
@@ -47,13 +61,13 @@ const Header = () => {
           <ul className="hidden md:flex items-center justify-center space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="text-lilicayol-black font-inter font-medium hover:text-lilicayol-purple transition-colors duration-300 relative group"
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-lilicayol-purple to-lilicayol-gold transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -74,13 +88,13 @@ const Header = () => {
               <ul className="space-y-4">
                 {menuItems.map((item) => (
                   <li key={item.name} className="text-center">
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       onClick={() => setIsMenuOpen(false)}
                       className="text-lilicayol-black font-inter font-medium hover:text-lilicayol-purple transition-colors duration-300"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

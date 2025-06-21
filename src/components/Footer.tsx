@@ -3,6 +3,8 @@ import React from 'react';
 import { Instagram, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-lilicayol-black text-white py-16">
       <div className="container mx-auto px-4">
@@ -14,8 +16,8 @@ const Footer = () => {
               <span className="block w-16 h-0.5 bg-gradient-to-r from-lilicayol-purple to-lilicayol-gold mt-2"></span>
             </h3>
             <p className="text-gray-300 font-inter leading-relaxed mb-6 max-w-md">
-              Uma boutique dedicada à elegância e sofisticação, oferecendo peças únicas 
-              para mulheres e homens que valorizam o estilo autêntico.
+              Uma boutique online dedicada à elegância e sofisticação, oferecendo peças únicas 
+              para mulheres que valorizam o estilo autêntico.
             </p>
             
             {/* WhatsApp Button */}
@@ -48,14 +50,6 @@ const Footer = () => {
                     (11) 99999-9999
                   </p>
                 </div>
-              </div>
-              
-              <div>
-                <p className="text-gray-300 font-inter text-sm leading-relaxed">
-                  Rua da Elegância, 123<br />
-                  Jardins, São Paulo - SP<br />
-                  CEP: 01234-567
-                </p>
               </div>
             </div>
           </div>
@@ -93,7 +87,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 font-inter text-sm">
-              © 2024 Lilicayol. Todos os direitos reservados.
+              © {currentYear} Lilicayol. Todos os direitos reservados.
             </p>
             
             <div className="flex gap-6">
