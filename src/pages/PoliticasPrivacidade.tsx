@@ -14,7 +14,7 @@ const PoliticasPrivacidade = () => {
               <h1 className="text-4xl md:text-5xl font-playfair font-bold text-lilicayol-black mb-4">
                 Políticas de Privacidade
               </h1>
-              <div className="w-24 h-0.5 bg-gradient-to-r from-lilicayol-purple to-lilicayol-gold mx-auto mb-6"></div>
+              <div className="w-24 h-0.5 bg-gradient-to-r from-lilicayol-beige to-lilicayol-gold mx-auto mb-6"></div>
               <p className="text-lg font-inter text-lilicayol-gray">
                 Sua privacidade é nossa prioridade
               </p>
@@ -22,7 +22,7 @@ const PoliticasPrivacidade = () => {
 
             <div className="space-y-12 text-lilicayol-black">
               <section className="bg-gray-50/50 p-8 rounded-2xl border border-gray-100">
-                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-purple">
+                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-beige">
                   1. Informações que Coletamos
                 </h2>
                 <div className="space-y-4 font-inter leading-relaxed">
@@ -38,8 +38,8 @@ const PoliticasPrivacidade = () => {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-lilicayol-purple/5 to-lilicayol-gold/5 p-8 rounded-2xl border border-lilicayol-purple/10">
-                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-purple">
+              <section className="bg-gradient-to-br from-lilicayol-beige/5 to-lilicayol-gold/5 p-8 rounded-2xl border border-lilicayol-beige/10">
+                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-beige">
                   2. Como Usamos suas Informações
                 </h2>
                 <div className="space-y-4 font-inter leading-relaxed">
@@ -56,7 +56,7 @@ const PoliticasPrivacidade = () => {
               </section>
 
               <section className="bg-gray-50/50 p-8 rounded-2xl border border-gray-100">
-                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-purple">
+                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-beige">
                   3. Proteção de Dados
                 </h2>
                 <div className="space-y-4 font-inter leading-relaxed">
@@ -68,8 +68,8 @@ const PoliticasPrivacidade = () => {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-lilicayol-purple/5 to-lilicayol-gold/5 p-8 rounded-2xl border border-lilicayol-purple/10">
-                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-purple">
+              <section className="bg-gradient-to-br from-lilicayol-beige/5 to-lilicayol-gold/5 p-8 rounded-2xl border border-lilicayol-beige/10">
+                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-beige">
                   4. Seus Direitos
                 </h2>
                 <div className="space-y-4 font-inter leading-relaxed">
@@ -86,13 +86,13 @@ const PoliticasPrivacidade = () => {
               </section>
 
               <section className="bg-gray-50/50 p-8 rounded-2xl border border-gray-100">
-                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-purple">
+                <h2 className="text-2xl font-cormorant font-semibold mb-6 text-lilicayol-beige">
                   5. Contato
                 </h2>
                 <div className="space-y-4 font-inter leading-relaxed">
                   <p>
                     Para questões sobre privacidade, entre em contato conosco através do e-mail 
-                    <a href="mailto:privacidade@lilicayol.com.br" className="text-lilicayol-purple hover:text-lilicayol-purple-dark transition-colors ml-1">
+                    <a href="mailto:privacidade@lilicayol.com.br" className="text-lilicayol-beige hover:text-lilicayol-beige-dark transition-colors ml-1">
                       privacidade@lilicayol.com.br
                     </a>
                   </p>

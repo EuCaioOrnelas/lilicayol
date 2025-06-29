@@ -1,113 +1,95 @@
 
 import React from 'react';
-import { Instagram, Mail, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Heart, Instagram, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-lilicayol-black to-gray-900 text-white py-16 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-8 right-8 w-32 h-32 bg-gradient-to-br from-lilicayol-purple/10 to-lilicayol-gold/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-8 left-8 w-24 h-24 bg-gradient-to-br from-lilicayol-gold/10 to-lilicayol-purple/10 rounded-full blur-2xl"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Logo and Description */}
-          <div className="md:col-span-2">
-            <h3 className="text-3xl font-playfair font-bold mb-4">
-              Lilicayol
-              <span className="block w-16 h-0.5 bg-gradient-to-r from-lilicayol-purple to-lilicayol-gold mt-2"></span>
-            </h3>
-            <p className="text-gray-300 font-inter leading-relaxed mb-6 max-w-md">
-              Uma boutique online dedicada à elegância e sofisticação, oferecendo peças únicas 
-              para mulheres que valorizam o estilo autêntico.
+    <footer className="bg-gradient-to-br from-gray-50 to-white border-t border-gray-100">
+      <div className="container mx-auto px-3 sm:px-4 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          {/* Logo e Descrição */}
+          <div className="sm:col-span-2 lg:col-span-2 text-center sm:text-left">
+            <h2 className="text-xl sm:text-2xl font-playfair font-bold text-lilicayol-black mb-3 sm:mb-4">
+              LiliCayol
+            </h2>
+            <p className="text-lilicayol-gray font-inter text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 max-w-md mx-auto sm:mx-0">
+              Peças cuidadosamente selecionadas para mulheres que valorizam qualidade, 
+              estilo e exclusividade em cada detalhe. Moda feminina com elegância e sofisticação.
             </p>
-            
-            {/* WhatsApp Button */}
-            <a
-              href="https://wa.me/5511999999999"
-              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-inter font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              <Phone size={20} />
-              WhatsApp
-            </a>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-cormorant font-semibold mb-6">Contato</h4>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <Mail size={18} className="text-lilicayol-gold mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300 font-inter text-sm">
-                    contato@lilicayol.com.br
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Phone size={18} className="text-lilicayol-gold mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300 font-inter text-sm">
-                    (11) 99999-9999
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
+              <a
+                href="https://instagram.com/lilicayol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-lilicayol-beige hover:border-lilicayol-beige hover:text-white transition-all duration-300 group"
+              >
+                <Instagram size={16} className="sm:w-[18px] sm:h-[18px] text-lilicayol-gray group-hover:text-white" />
+              </a>
+              <a
+                href="mailto:lilicayol@gmail.com.br"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-lilicayol-beige hover:border-lilicayol-beige hover:text-white transition-all duration-300 group"
+              >
+                <Mail size={16} className="sm:w-[18px] sm:h-[18px] text-lilicayol-gray group-hover:text-white" />
+              </a>
             </div>
           </div>
 
-          {/* Social Media */}
-          <div>
-            <h4 className="text-lg font-cormorant font-semibold mb-6">Redes Sociais</h4>
-            <div className="flex flex-col gap-4">
-              <a
-                href="#"
-                className="group flex items-center gap-3 text-gray-300 hover:text-lilicayol-purple transition-all duration-300"
-              >
-                <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-gray-700 rounded-full flex items-center justify-center group-hover:from-lilicayol-purple group-hover:to-lilicayol-purple-dark transition-all duration-300 shadow-lg">
-                  <Instagram size={18} />
-                </div>
-                <span className="font-inter text-sm">@lilicayol</span>
-              </a>
-              
-              <a
-                href="#"
-                className="group flex items-center gap-3 text-gray-300 hover:text-lilicayol-gold transition-all duration-300"
-              >
-                <div className="w-10 h-10 bg-gradient-to-br from-gray-800 to-gray-700 rounded-full flex items-center justify-center group-hover:from-lilicayol-gold group-hover:to-lilicayol-gold-dark transition-all duration-300 shadow-lg">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </div>
-                <span className="font-inter text-sm">Lilicayol</span>
-              </a>
-            </div>
+          {/* Links Úteis */}
+          <div className="text-center sm:text-left">
+            <h3 className="font-cormorant font-semibold text-lilicayol-black mb-3 sm:mb-4 text-base sm:text-lg">
+              Links Úteis
+            </h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li>
+                <a href="/" className="text-lilicayol-gray hover:text-lilicayol-beige transition-colors duration-300 text-xs sm:text-sm font-inter">
+                  Início
+                </a>
+              </li>
+              <li>
+                <a href="/novidades" className="text-lilicayol-gray hover:text-lilicayol-beige transition-colors duration-300 text-xs sm:text-sm font-inter">
+                  Novidades
+                </a>
+              </li>
+              <li>
+                <a href="/contato" className="text-lilicayol-gray hover:text-lilicayol-beige transition-colors duration-300 text-xs sm:text-sm font-inter">
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Informações */}
+          <div className="text-center sm:text-left">
+            <h3 className="font-cormorant font-semibold text-lilicayol-black mb-3 sm:mb-4 text-base sm:text-lg">
+              Informações
+            </h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li>
+                <a href="/politicas-privacidade" className="text-lilicayol-gray hover:text-lilicayol-beige transition-colors duration-300 text-xs sm:text-sm font-inter">
+                  Política de Privacidade
+                </a>
+              </li>
+              <li>
+                <a href="/termos-uso" className="text-lilicayol-gray hover:text-lilicayol-beige transition-colors duration-300 text-xs sm:text-sm font-inter">
+                  Termos de Uso
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-700/50 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 font-inter text-sm">
-              © {currentYear} Lilicayol. Todos os direitos reservados.
+        {/* Linha divisória */}
+        <div className="border-t border-gray-200 mt-6 sm:mt-8 pt-4 sm:pt-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
+            <p className="text-lilicayol-gray text-xs sm:text-sm font-inter text-center md:text-left">
+              © {currentYear} LiliCayol. Todos os direitos reservados.
             </p>
-            
-            <div className="flex gap-6">
-              <Link 
-                to="/politicas-privacidade" 
-                className="text-gray-400 hover:text-lilicayol-purple font-inter text-sm transition-colors duration-300"
-              >
-                Política de Privacidade
-              </Link>
-              <Link 
-                to="/termos-uso" 
-                className="text-gray-400 hover:text-lilicayol-purple font-inter text-sm transition-colors duration-300"
-              >
-                Termos de Uso
-              </Link>
+            <div className="flex items-center gap-2 text-lilicayol-gray text-xs sm:text-sm font-inter">
+              <span>Feito com</span>
+              <Heart size={14} className="sm:w-4 sm:h-4 text-lilicayol-beige fill-current" />
+              <span>para você</span>
             </div>
           </div>
         </div>

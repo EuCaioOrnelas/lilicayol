@@ -69,9 +69,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				lilicayol: {
-					purple: '#8B5CF6',
-					'purple-light': '#A78BFA',
-					'purple-dark': '#7C3AED',
+					beige: '#D4B896',
+					'beige-light': '#E6D7C1',
+					'beige-dark': '#C19A6B',
+					'beige-hover': '#B8956A',
 					gold: '#F59E0B',
 					'gold-light': '#FCD34D',
 					'gold-dark': '#D97706',

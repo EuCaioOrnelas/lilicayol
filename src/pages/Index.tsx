@@ -1,20 +1,17 @@
 
 import React from 'react';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import Hero from '../components/Hero';
+import AboutSection from '../components/AboutSection';
 import ProductSection from '../components/ProductSection';
-import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main className="pt-32">
-        <Hero />
-        <ProductSection />
-      </main>
-      <Footer />
-    </div>
+    <Layout>
+      <Hero />
+      <AboutSection />
+      <ProductSection />
+    </Layout>
   );
 };
 
